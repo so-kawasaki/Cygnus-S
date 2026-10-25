@@ -96,15 +96,8 @@
 
     left_encoder: encoder_left {
         compatible = "alps,ec11";
-        /* 元の設定（戻すときに使用）
         a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        */
-
-        // テスト用：内蔵プルアップを無効化
-        a-gpios = <&xiao_d 5 GPIO_ACTIVE_HIGH>;
-        b-gpios = <&xiao_d 0 GPIO_ACTIVE_HIGH>;
-
         steps = <48>;
         status = "disabled";
     };
