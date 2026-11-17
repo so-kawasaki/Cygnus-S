@@ -64,7 +64,8 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
 
-            tap-ms = <20>;
+            /* Hold long enough to emit two 16 ms scroll reports per trigger. */
+            tap-ms = <40>;
         };
     };
 

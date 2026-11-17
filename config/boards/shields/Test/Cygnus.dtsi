@@ -110,7 +110,7 @@
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
-        /* Emit 1.5x as many scroll actions as the 30-trigger baseline. */
-        triggers-per-rotation = <45>;
+        /* Emit once for each detent in the 15-pulse / 30-detent configuration. */
+        triggers-per-rotation = <30>;
     };
 };
