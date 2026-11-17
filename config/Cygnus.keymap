@@ -79,7 +79,7 @@
 &mt (LEFT_CONTROL) LG(C)  &kp TAB  &kp LG(V)       &kp BACKSPACE   &lt 1 LANGUAGE_2  &lt 2 SPACE        &kp ENTER   &lt 3 LANGUAGE_1                                             &kp LA(LG(B))
             >;
 
-            sensor-bindings = <&ROTATE MOVE_Y(-480) MOVE_Y(480)>;
+            sensor-bindings = <&ROTATE MOVE_Y(-720) MOVE_Y(720)>;
         };
 
         layer1 {
