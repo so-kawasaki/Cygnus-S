@@ -98,8 +98,8 @@
         compatible = "alps,ec11";
         a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        /* 24 detents x 4 quadrature transitions = 96 steps per rotation. */
-        steps = <96>;
+        /* The encoder driver measures 48 phase transitions per rotation. */
+        steps = <48>;
         status = "disabled";
     };
 
@@ -110,7 +110,7 @@
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
-        /* Emit one keymap sensor event for each physical detent. */
-        triggers-per-rotation = <24>;
+        /* Emit once for every transition detected from a physical click. */
+        triggers-per-rotation = <48>;
     };
 };
