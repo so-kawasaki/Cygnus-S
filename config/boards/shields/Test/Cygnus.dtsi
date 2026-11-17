@@ -98,8 +98,8 @@
         compatible = "alps,ec11";
         a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        /* 12 pulses x 4 phase transitions = 48 steps per rotation. */
-        steps = <48>;
+        /* Test setting for a 15-pulse / 30-detent encoder. */
+        steps = <60>;
         status = "disabled";
     };
 
@@ -110,7 +110,7 @@
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
-        /* The encoder has 24 physical detents per rotation. */
-        triggers-per-rotation = <24>;
+        /* Test setting: emit once for each of 30 detents per rotation. */
+        triggers-per-rotation = <30>;
     };
 };
